@@ -1,0 +1,976 @@
+/*
+   CS2-SIVUSTO - tyylitiedosto
+   Tiedosto: css/tyyli.css
+*/
+
+
+/* --- 1. YLEISET MUUTTUJAT (värit, fontit) ---
+   Muuta värejä tästä helposti koko sivustoon kerralla. */
+:root {
+  --cs2-keltainen: #f5a623;      /* CS2-brändin oranssi/keltainen korostusväri */
+  --cs2-tumma: #0d0f14;          /* Erittäin tumma tausta */
+  --cs2-harmaa-tumma: #1a1d24;   /* Navigaation ja korttien tausta */
+  --cs2-harmaa-keski: #2c3040;   /* Rajaviivat ja välipohjat */
+  --cs2-harmaa-vaalea: #8a95a8;  /* Toissijainen teksti */
+  --cs2-valkoinen: #e8eaf0;      /* Päätekstit (ei puhdas valkoinen) */
+  --cs2-punainen: #e8353a;       /* Varoitukset, CTA-napit */
+}
+
+
+/* --- 2. BODY JA PERUSTEKSTIT --- */
+body {
+  background-color: var(--cs2-tumma);
+  color: var(--cs2-valkoinen);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* --- 3. NAVIGAATIO (navbar) ---
+   Bootstrap navbar mukautettu CS2-teemaan. */
+.navbar {
+  background-color: var(--cs2-harmaa-tumma) !important;
+  border-bottom: 2px solid var(--cs2-keltainen) ;   /* Keltainen viiva alhaalla */
+  padding: 12px 0;
+}
+
+/* Sivuston logo / nimi navigaatiossa */
+.navbar-brand {
+  color: var(--cs2-keltainen) !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Navigaatiolinkit */
+.navbar-nav .nav-link {
+  color: var(--cs2-valkoinen) !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 8px 16px !important;
+  transition: color 0.2s ease;   /* Sulava värinmuutos hover-tilassa */
+}
+
+/* Navigaatiolinkin hover-tila */
+.navbar-nav .nav-link:hover {
+  color: var(--cs2-keltainen) !important;
+}
+
+/* Aktiivinen sivu navigaatiossa */
+.navbar-nav .nav-link.active {
+  color: var(--cs2-keltainen) !important;
+  border-bottom: 2px solid var(--cs2-keltainen);
+}
+
+/* Hampurilaisnapin väri */
+.navbar-toggler {
+  border-color: var(--cs2-keltainen);
+}
+
+.navbar-toggler-icon {
+  /* Muutetaan hampurilaisikoni keltaiseksi SVG-kuvana */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f5a623' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* --- 4. HERO-BANNERI (pääsivun yläosa) ---
+   Suuri esittelyosio pääsivulla. */
+.hero-banneri {
+  background: linear-gradient(
+    135deg,
+    var(--cs2-harmaa-tumma) 0%,
+    var(--cs2-harmaa-keski) 50%,
+    var(--cs2-tumma) 100%
+  );
+  border-bottom: 3px solid var(--cs2-keltainen);
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Hero-otsikko */
+.hero-banneri h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--cs2-keltainen);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+
+/* Hero-alaotsikko */  
+.hero-banneri p.hero-teksti {
+  margin-bottom: 32px;
+  font-size: 1.2rem;
+  color: var(--cs2-harmaa-vaalea);
+  max-width: 600px;
+  margin: 0 auto 24px auto;
+}
+
+
+/* --- 5. OSIO-OTSIKOT ---
+   Yhtenäinen tyyli kaikille sivujen väliotsikoille. */
+.osio-otsikko {
+  color: var(--cs2-keltainen);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  border-left: 4px solid var(--cs2-keltainen);  /* Keltainen viiva vasemmalla */
+  padding-left: 12px;
+}
+
+/* Otsikon alla oleva koristelinja */
+.osio-viiva {
+  width: 60px;
+  height: 3px;
+  background-color: var(--cs2-keltainen);
+  margin-bottom: 32px;
+  margin-left: 16px;
+}
+
+
+/* --- 6. KORTIT (pelit, kohteet, uutiset) --- */
+.cs2-kortti {
+  background-color: var(--cs2-harmaa-tumma);
+  border: 1px solid var(--cs2-harmaa-keski);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  height: 100%;   /* Kortit saman korkuisia rivissä */
+}
+
+/* Kortin hover-efekti: nousee hieman ylös */
+.cs2-kortti:hover {
+  transform: translateY(-4px);
+  border-color: var(--cs2-keltainen);
+}
+
+/* Kortin kuvat */
+.kortti-kuva {
+  width: 100%;
+  height: 200px;
+  background-color: var(--cs2-harmaa-keski);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* Kohdistetaan tyylit divin sisällä olevaan img-tagiin */
+.kortti-kuva img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Kortin sisältöalue */
+.kortti-sisalto {
+  padding: 20px;
+}
+
+/* Kortin otsikko */
+.kortti-sisalto h5 h2 {
+  color: var(--cs2-keltainen);
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Kortin teksti */
+.kortti-sisalto p {
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Poistaa .cs2-korttikuvien linkkialleviivauksen  */
+a:has(.cs2-kortti) {
+  text-decoration: none;
+  color: inherit; /* Pitää tekstin värit sellaisina kuin ne olivat */
+}
+
+/* --- 7. NAPIT (painikkeet) --- */
+
+/* Päänappityyli: keltainen/oranssi */
+.nappi-paa {
+  background-color: var(--cs2-keltainen);
+  color: var(--cs2-tumma);
+  border: none;
+  padding: 10px 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.nappi-paa:hover {
+  background-color: #d4901f;   /* Hieman tummempi keltainen hover-tilassa */
+  color: var(--cs2-tumma);
+  text-decoration: none;
+}
+
+/* Toissijainen nappi: läpinäkyvä reunuksella */
+.nappi-toissijainen {
+  background-color: transparent;
+  color: var(--cs2-keltainen);
+  border: 2px solid var(--cs2-keltainen);
+  padding: 10px 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.nappi-toissijainen:hover {
+  background-color: var(--cs2-keltainen);
+  color: var(--cs2-tumma);
+  text-decoration: none;
+}
+
+
+/* --- 8. LOMAKE-TYYLIT (yhteydenottolomake) --- */
+
+/* Lomakkeen taustakortti */
+.lomake-kortti {
+  background-color: var(--cs2-harmaa-tumma);
+  border: 1px solid var(--cs2-harmaa-keski);
+  border-radius: 8px;
+  padding: 40px;
+}
+
+/* Tekstikentät ja pudotusvalikot */
+.lomake-kentta {
+  background-color: var(--cs2-harmaa-keski);
+  border: 1px solid #3a3f54;
+  color: var(--cs2-valkoinen);
+  border-radius: 4px;
+  padding: 10px 14px;
+  width: 100%;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+/* Kenttä aktiivisena (focus) */
+.lomake-kentta:focus {
+  outline: none;
+  border-color: var(--cs2-keltainen);
+  background-color: var(--cs2-harmaa-keski);
+  color: var(--cs2-valkoinen);
+  box-shadow: 0 0 0 2px rgba(245, 166, 35, 0.25);
+}
+
+/* Kenttien paikkamerkki (placeholder) teksti */
+.lomake-kentta::placeholder {
+  color: var(--cs2-harmaa-vaalea);
+}
+
+/* Lomakkeen labelit */
+.lomake-label {
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Checkboxin määritys */
+.checkbox {
+  margin-bottom: 48px;  
+}
+
+/* Säiliö, joka pitää ruudun ja tekstin rinnakkain */
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Valintaruudun muotoilut */
+.custom-checkbox {
+  margin-top: 3px;
+  accent-color: var(--cs2-keltainen);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Tekstin muotoilut */
+.checkbox-label {
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.85rem;
+}
+
+/* Lähetysnappi */
+.lomake-nappi {
+  background-color: var(--cs2-keltainen);
+  color: var(--cs2-tumma);
+  border: none;
+  padding: 12px 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.lomake-nappi:hover {
+  background-color: #d4901f;
+}
+
+.yhteystiedot p {
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.8rem;
+  margin-top: 16px;
+}
+
+
+/* --- 9. KUVAGALLERIA ---
+   Ruudukkoasettelu galleriasivulle. */
+
+/* Galleriaruudukko: Bootstrap-gridillä */
+.galleria-kuva-kehys {
+  background-color: var(--cs2-harmaa-keski);
+  border: 1px solid var(--cs2-harmaa-keski);
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 400 x 225;         /* Vakiokuvasuhde kaikille galleriakorteille aikaisemmin 16 / 9 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.8rem;
+  transition: border-color 0.2s ease;
+  margin-bottom: 24px;
+}
+.galleria-kuva-kehys2 {
+  background-color: var(--cs2-harmaa-keski);
+  border: 1px solid var(--cs2-harmaa-keski);
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 800 x 450;         /* Vakiokuvasuhde kaikille galleriakorteille aikaisemmin 16 / 9 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.8rem;
+  transition: border-color 0.2s ease;
+  margin-bottom: 24px;
+  height: 280px;
+}
+
+
+.galleria-kuva-kehys:hover {
+  border-color: var(--cs2-keltainen);
+}
+
+.galleria-kuva-kehys2:hover {
+  border-color: var(--cs2-keltainen);
+}
+
+/* --- tekstimuotoilu gallerian kuvien alle --- */
+.galleria-p {
+color: var(--cs2-harmaa-vaalea);
+font-size: 0.8rem;
+text-align: center;
+margin-top: -16px;
+}
+
+.galleria-p2 {
+color: var(--cs2-harmaa-vaalea);
+font-size: 0.8rem;
+text-align: center;
+margin-top: -16px;
+}
+
+
+/* --- 10. Tietopankki-SIVU (CSS Grid + Flexbox) ---
+   Tietopankkisivu käyttää CSS Grid -asettelua, ei Bootstrap-gridia. */
+
+/* Pääruudukko: sivupalkki ja sisältö vierekkäin */
+.info-ruudukko {
+  display: grid;
+  grid-template-columns: 280px 1fr;   /* Kiinteä sivupalkki + joustava sisältö */
+  grid-template-rows: auto;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+/* Sivupalkki (grid-item) */
+.info-sivupalkki {
+  background-color: var(--cs2-harmaa-tumma);
+  border: 1px solid var(--cs2-harmaa-keski);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* Sivupalkin otsikko */
+.info-sivupalkki h3 {
+  color: var(--cs2-keltainen);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+/* Erotteluviivat (<hr>) */
+.info-sivupalkki .sivupalkki-viiva {
+  border: 0;
+  border-top: 1px solid var(--cs2-harmaa-keski);
+  margin: 24px 0;
+}
+
+/* Pikainfon tekstilohko */
+.info-sivupalkki .pikainfo-teksti {
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+/* Pikainfon lihavoidut otsikot (strong) */
+.info-sivupalkki .pikainfo-otsikko {
+  color: var(--cs2-valkoinen);
+}
+
+/* Steam-nappi (laajennus olemassa olevaan .nappi-paa luokkaan) */
+.info-sivupalkki .sivupalkki-nappi {
+  display: block;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Sivupalkin linkkilista (flexbox) */
+.sivupalkki-lista {
+  display: flex;
+  flex-direction: column;   /* Linkit päällekkäin */
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sivupalkki-lista li a {
+  color: var(--cs2-harmaa-vaalea);
+  text-decoration: none;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.sivupalkki-lista li a:hover {
+  color: var(--cs2-keltainen);
+}
+
+/* Pääsisältöalue (grid-item) */
+.info-sisalto {
+  background-color: var(--cs2-harmaa-tumma);
+  border: 1px solid var(--cs2-harmaa-keski);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+/* Info-tilastot Flexboxilla: rivissä rinnakkain */
+.info-tilastot {
+  display: flex;
+  flex-wrap: wrap;          /* Rivittyvät pienemmällä näytöllä */
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* Yksittäinen tilastolaatikko */
+.tilasto-laatikko {
+  flex: 1 1 140px;          /* Kasvaa tasaisesti, min 140px */
+  background-color: var(--cs2-harmaa-keski);
+  border: 1px solid #3a3f54;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+}
+
+.tilasto-arvo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--cs2-keltainen);
+  display: block;
+}
+
+.tilasto-nimi {
+  font-size: 0.8rem;
+  color: var(--cs2-harmaa-vaalea);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tilasto-viiva {
+  border-color: var(--cs2-harmaa-keski); 
+  margin: 40px 0;
+}
+
+/* Pelimuotojen yhteinen flexbox-säiliö */
+.pelimuodot-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Yksittäinen pelimuotokortti */
+.pelimuoto-kortti {
+  flex: 1 1 200px; /* Kasvu, kutistus ja minimikoko responsiivisuutta varten */
+  background: var(--cs2-harmaa-keski);
+  border-radius: 6px;
+  padding: 20px;
+  border-left: 4px solid var(--cs2-keltainen);
+}
+
+/* Kortin sisällä oleva otsikko */
+.pelimuoto-kortti h5 {
+  color: var(--cs2-keltainen);
+  margin-bottom: 8px;
+  margin-top: 0; /* Varmistetaan ettei selaimen oletusmarginaali sotke */
+}
+
+/* Kortin sisällä oleva leipäteksti */
+.pelimuoto-kortti p {
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Aseiden vertailutaulukko */
+.info-taulukko {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.info-taulukko th {
+  background-color: var(--cs2-harmaa-keski);
+  color: var(--cs2-keltainen);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-taulukko td {
+  padding: 12px 16px;
+  color: var(--cs2-harmaa-vaalea);
+  border-bottom: 1px solid var(--cs2-harmaa-keski);
+  font-size: 0.9rem;
+}
+
+.info-taulukko tr:hover td {
+  background-color: rgba(245, 166, 35, 0.05);
+  color: var(--cs2-valkoinen);
+}
+
+.aseet {
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.9rem;
+}
+
+/* Esittelytekstin muotoilu */
+#termit .termisto-esittely {
+  color: var(--cs2-harmaa-vaalea);
+  margin-bottom: 16px;
+}
+
+/* Termikorttien yhteinen flexbox-säiliö */
+.termisto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Yksittäinen termikortti */
+.termi-kortti {
+  flex: 1 1 280px; /* Kortin venyminen, kutistuminen ja minimikoko vähintään 280px */
+  background: var(--cs2-harmaa-keski);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+/* Kortin lihavoitu päätermi (strong) */
+.termi-kortti strong {
+  color: var(--cs2-keltainen);
+  display: block; /* Pakottaa selityksen alkamaan aina omalta riviltään */
+}
+
+/* Kortin sisällä oleva selitysteksti */
+.termi-kortti p {
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.85rem;
+  margin: 4px 0 0; /* Jättää 4px väliä yläpuolella olevaan otsikkoon */
+}
+
+/* --- 11. ALATUNNISTE (footer) --- */
+.alatunniste {
+  background-color: var(--cs2-harmaa-tumma);
+  border-top: 2px solid var(--cs2-harmaa-keski);
+  padding: 40px 0 20px;
+  margin-top: 60px;
+}
+
+.alatunniste h5 {
+  color: var(--cs2-keltainen);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.alatunniste p,
+.alatunniste a {
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.alatunniste a:hover {
+  color: var(--cs2-keltainen);
+}
+
+.alatunniste-alaosa {
+  border-top: 1px solid var(--cs2-harmaa-keski);
+  margin-top: 32px;
+  padding-top: 16px;
+  color: var(--cs2-harmaa-vaalea);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+
+/* --- 12. APULUOKAT (yhteiset tyylit eri sivuille) --- */
+
+/* Tasainen välimatka sisällön yläpuolella (navigaation jälkeen) */
+.sivun-sisalto {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* Tummempi taustasektio vaihtelun vuoksi */
+.tausta-tumma {
+  background-color: var(--cs2-harmaa-tumma);
+  padding: 60px 0;
+}
+
+/* Vaalea korostuslaatikko (badge/tagi) */
+.cs2-tagi {
+  display: inline-block;
+  background-color: var(--cs2-keltainen);
+  color: var(--cs2-tumma);
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+/* Teksti, joka korostuu keltaisella */
+.teksti-korostettu {
+  color: var(--cs2-keltainen);
+}
+
+/* --- 13. Infosivun määrittelyt --- */
+
+/* ── 2×2 CSS Grid ── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--gap);
+  max-width: 900px;
+  width: 100%;
+}
+
+.card {
+  background: var(--cs2-harmaa-tumma);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  min-height: 260px;
+}
+
+/* ═══════════════════════════════════════
+   KORTTI 1 – Kuva + tiedot (KORJATTU GRIDIKSI)
+═══════════════════════════════════════ */
+.card-1 {
+  padding: 0; /* Otetaan tyhjä tila haluun, jotta alarivi osuu reunoihin asti */
+  display: grid;
+  /* Jaetaan kortti kahteen sarakkeeseen (50% / 50%) */
+  grid-template-columns: 1fr 1fr; 
+}
+
+/* Vasen yläosa – kuvaympyrä + nimi */
+.card-1-row1 {
+  display: flex;
+  flex-direction: column; /* Kuva ja nimi allekkain */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem 1rem 1rem 1.8rem; /* Erilliset pehmusteet */
+}
+
+.profile-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--cs2-keltainen);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--cs2-tumma);
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--cs2-valkoinen);
+  margin: 0;
+}
+
+.profile-info .title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--cs2-keltainen);
+  margin-top: 4px;
+}
+
+/* Oikea yläosa – yhteystiedot */
+.card-1-row2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 2rem 1.8rem 1rem 1rem;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.contact-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--cs2-harmaa-keski);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--cs2-harmaa-vaalea);
+}
+
+.contact-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--cs2-valkoinen);
+}
+
+.contact-text {
+  font-size: 0.85rem;
+  color: var(--cs2-harmaa-vaalea);
+}
+
+/* Alarivi – some-linkit */
+.card-1-row3 {
+  /* TÄRKEÄ: Venytetään alarivi molempien sarakkeiden yli */
+  grid-column: span 2;   
+  display: flex;
+  justify-content: space-around; /* Levittää linkit tasaisesti */
+  align-items: center;
+  margin-top: auto; /* Pakottaa alarivin aina kortin pohjalle */
+  padding: 1rem;
+  background: var(--cs2-tumma); /* Kevyt taustaväri erottamaan alarivin, säädä tarvittaessa */
+  border-top: 1px solid var(--cs2-harmaa-keski);
+}
+
+.social-link {
+  font-size: 0.85rem;
+  color: var(--cs2-harmaa-vaalea);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.social-link svg { 
+  width: 14px; 
+  height: 14px; 
+  fill: currentColor; 
+}
+
+/* ═══════════════════════════════════════
+   KORTTI 2 – Logo keskellä
+═══════════════════════════════════════ */
+.card-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.logo-ring {
+  width: var(--circle-size, 140px); /* Lisätty fallback-koko jos muuttuja puuttuu */
+  height: var(--circle-size, 140px);
+  border-radius: 50%;
+  border: 3px solid var(--cs2-keltainen);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cs2-tumma);
+}
+
+.logo-ring .logo-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.logo-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--cs2-valkoinen);
+  margin-top: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.logo-url {
+  font-size: 0.75rem;
+  color: var(--cs2-harmaa-vaalea);
+  margin-top: 0.25rem;
+}
+
+/* ═══════════════════════════════════════
+   KORTTI 3 – Teksti vasemmalta, kohdistettu keskelle
+═══════════════════════════════════════ */
+.card-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card-3-text {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--cs2-valkoinen);
+  font-weight: 300;
+  text-align: left;
+}
+
+.card-3-text strong {
+  color: var(--cs2-keltainen);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════
+   KORTTI 4 – Some-linkit, keskitetty
+═══════════════════════════════════════ */
+.card-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.some-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: var(--cs2-valkoinen);
+  font-size: 0.95rem;
+}
+
+.some-link-item .link-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cs2-harmaa-keski);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.some-link-item .link-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--cs2-harmaa-vaalea);
+}
+
+/* Responsiivisuus */
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Mobiilissa Kortti 1 muuttuu takaisin yhdeksi sarakkeeksi, jotta se mahtuu ruudulle */
+  .card-1 {
+    grid-template-columns: 1fr;
+  }
+  .card-1-row1 {
+    padding: 2rem 1.8rem 1rem 1.8rem;
+  }
+  .card-1-row2 {
+    padding: 1rem 1.8rem 2rem 1.8rem;
+  }
+  .card-1-row3 {
+    grid-column: span 1;
+  }
+  
+  .card { min-height: auto; }
+}
+
+
+
+/* ============================================================
+   Tiedosto päättyy tähän.
+   ============================================================ */

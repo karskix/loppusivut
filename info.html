@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--
+     Tiedosto: info.html
+     Sivu:     CS2 - Info
+-->
+<html lang="fi">
+
+<head>
+  <!-- Merkistökoodaus: UTF-8 tukee ääkkösiä -->
+  <meta charset="UTF-8">
+  <!-- Sivun kuvaus hakukoneita varten -->
+  <meta name="description" content="CS2-sivusto – Counter-Strike 2 esittely, kartat, aseet ja yhteystiedot.">
+  <!-- Sivuston tekijä -->
+  <meta name="author" content="Jani Hynninen, Lapin AMK, Lapland UAS">
+  <!-- Hakusanat hakukoneille -->
+  <meta name="keywords" content="CS2, Counter-Strike 2, FPS, pelisivu, kartat, aseet">
+  <!-- Sivun skaalautuvuus näytön mukaan -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Sivun otsikko selainvälilehdessä -->
+  <title>CS2-sivusto | Infosivu</title>
+  <!-- Bootstrap 5 CSS CDN-linkki + logolinkki-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Oma tyylitiedosto -->
+  <link rel="stylesheet" href="../Lopputyö/CSS/tyyli.css">
+</head>
+
+<body>
+
+  <!-- NAVIGAATIO -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <!-- Sivuston nimi / logo vasemmalla -->
+      <a class="navbar-brand" href="index.html">⬥ CS2-SIVUSTO ⬥</a>
+
+      <!-- Hampurilaisnappula  (alle lg-leveyden) -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navigaatioMenu"
+              aria-controls="navigaatioMenu"
+              aria-expanded="false"
+              aria-label="Avaa valikko">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigaatiolinkit -->
+      <div class="collapse navbar-collapse" id="navigaatioMenu">
+        <ul class="navbar-nav ms-auto">
+          <!-- ms-auto siirtää linkit oikealle reunaan -->
+          <!-- Linkitykset oikeille sivuille-->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Etusivu</a>  
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kartat.html">Kartat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galleria.html">Galleria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yhteystiedot.html">Yhteystiedot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tietopankki.html">Tietopankki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="info.html">Info</a>
+            <!-- "active" korostaa nykyisen sivun -->
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- /NAVIGAATIO -->
+
+
+  <!-- HERO-BANNERI - Suuri esittelyosio jokaisen sivun yläosassa -->
+  <section class="hero-banneri">
+    <div class="container">
+
+      <!-- Pieni tagi ennen pääotsikkoa -->
+      <span class="cs2-tagi">Infosivu</span>
+
+      <!-- Pääotsikko -->
+      <h1>Pakollinen infosivu</h1>
+
+      <!-- Alaotsikkoteksti -->
+      <p class="hero-teksti">
+       Pakollinen infosivu.
+      </p>
+
+    </div>
+  </section>
+  <!-- /HERO-BANNERI -->
+
+ <!-- Infolaatikko alkaa-->
+<section class="sivun-sisalto">
+  <div class="container">
+    <div class="cards-grid">
+
+      <!-- KORTTI 1: Kuva + tiedot -->
+      <div class="card card-1 cs2-kortti">
+
+        <!-- Osa 1: Kuvaympyrä + nimi (Vasen yläkulma) -->
+        <div class="card-1-row1">
+          <div class="profile-circle">
+            <!--omakuva-->
+            <img src="../Lopputyö/kuvat/info/oma-kuva.png" alt="Kuva" /> 
+          </div>
+          <div class="profile-info">
+            <h2>Jani Hynninen</h2>
+            <div class="title">Designer / Opiskelija</div>
+          </div>
+        </div>
+
+        <!-- Osa 2: Yhteystiedot (Oikea yläkulma) -->
+        <div class="card-1-row2">
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              </svg>
+            </div>
+            <span class="contact-text">Esimerkkikatu 1, 00000 Mielikuvituskaupunki</span>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+              </svg>
+            </div>
+            <span class="contact-text">+358 40 123 4567</span>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <span class="contact-text">jhynnine@edu.lapinamk.fi</span>
+          </div>
+        </div>
+
+        <!-- Osa 3: Some-linkit (Koko alarivi) -->
+        <div class="card-1-row3">
+          <a href="https://www.instagram.com" class="social-link">
+            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10A5 5 0 0 1 12 7zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            @instagram
+          </a>
+          <a href="https://www.facebook.com" class="social-link">
+            <svg viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+            @facebook
+          </a>
+          <a href="https://www.x.com" class="social-link">
+            <svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+            @twitter
+          </a>
+        </div>
+
+      </div><!-- /kortti 1 -->
+
+
+      <!-- KORTTI 2: Koulun logo keskellä -->
+      <div class="card card-2 cs2-kortti">
+        <div class="logo-ring">
+          <!--Koulunlogo-->
+          <img class="logo-img" src="../Lopputyö/kuvat/info/lapinamk_rgb.png" alt="Lapin AMK logo" />
+        </div>
+        <div class="logo-name">Lapin ammattikorkeakoulu</div>
+        <div class="logo-url">www.lapinamk.fi</div>
+      </div><!-- /kortti 2 -->
+
+
+      <!-- KORTTI 3: Teksti vasemmalta, kohdistettu keskelle -->
+      <div class="card card-3 cs2-kortti">
+        <p class="card-3-text">
+          Tämä sivusto on tehty <strong>Lapin ammattikorkeakoulun</strong>
+          Verkkosivujen toteutus ja julkaisu ‑opintojakson lopputyönä,
+          eikä edusta todellista sivustoa.
+        </p>
+      </div><!-- /kortti 3 -->
+
+
+      <!-- KORTTI 4: Some-linkit, keskitetty -->
+      <div class="card card-4 cs2-kortti">
+        <a href="https://www.lapinamk.fi" target="_blank" class="some-link-item">
+          <span class="link-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </span>
+          Linkki Lapin Amk kotisivu
+        </a>
+
+        <a href="https://www.facebook.com/lapinamk" target="_blank" class="some-link-item">
+          <span class="link-icon">
+            <svg viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+          </span>
+          Linkki Lapin Amk Facebook
+        </a>
+
+        <a href="https://www.instagram.com/lapinamk" target="_blank" class="some-link-item">
+          <span class="link-icon">
+            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10A5 5 0 0 1 12 7zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+          </span>
+          Linkki Lapin Amk Instagram
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!--/Infolaatikko loppuu-->
+  
+
+
+  <!-- ALATUNNISTE (footer) -->
+  <footer class="alatunniste">
+    <div class="container">
+      <div class="row">
+
+        <!-- Sarake 1: Tietoa sivustosta -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>CS2-Sivusto</h5>
+          <p>
+            "Fanisivu" Counter-Strike 2 -pelille. Kaikki oikeudet kuuluvat
+            Valve Corporationille. Kuvat Valven youtube ja tekstit tekoälyllä. Kaikki sisältö on vain harjoitustarkoituksessa tehty.
+            Tämä on kurssin päättötyö.
+          </p>
+        </div>
+
+        <!-- Sarake 2: Nopeat linkit -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>Sivut</h5>
+          <p><a href="index.html">Etusivu</a></p>
+          <p><a href="kartat.html">Kartat & Kohteet</a></p>
+          <p><a href="galleria.html">Kuvagalleria</a></p>
+          <p><a href="yhteystiedot.html">Yhteystiedot</a></p>
+          <p><a href="tietopankki.html">Tietopankki</a></p>
+        </div>
+
+        <!-- Sarake 3: Yhteystiedot -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>Yhteystiedot</h5>
+          <p>Sähköposti: ei@ole.net</p>
+          <p>Discord: Eiole#123</p>
+          <p>Steam: Eiole/cs2sivusto</p>
+        </div>
+
+      </div>
+
+      <!-- Alatunnisteen alaosa: tekijänoikeudet -->
+      <div class="alatunniste-alaosa">
+        <p>
+          &copy; 2026 Jani Hynninen | Tehty HTML-kurssin projektina.
+          Counter-Strike 2 on Valve Corporationin tavaramerkki.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- /ALATUNNISTE -->
+</section>
+
+</body>
+</html>

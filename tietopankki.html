@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!--
+     Tiedosto: Tietopankki.html
+     Sivu:     CS2 - Tietopankki
+     Kuvaus:   Yksinkertainen tietopankkisivu CS2:sta.
+-->
+<html lang="fi">
+
+<head>
+  <!-- Merkistökoodaus: UTF-8 tukee ääkkösiä -->
+  <meta charset="UTF-8">
+  <!-- Sivun kuvaus hakukoneita varten -->
+  <meta name="description" content="CS2-sivusto – Counter-Strike 2 esittely, kartat, aseet ja yhteystiedot.">
+  <!-- Sivuston tekijä -->
+  <meta name="author" content="Jani Hynninen, Lapin AMK, Lapland UAS">
+  <!-- Hakusanat hakukoneille -->
+  <meta name="keywords" content="CS2, Counter-Strike 2, FPS, pelisivu, kartat, aseet">
+  <!-- Sivun skaalautuvuus näytön mukaan -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Sivun otsikko selainvälilehdessä -->
+  <title>CS2-sivusto | Tietopankki</title>
+  <!-- Bootstrap 5 CSS CDN-linkki -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Oma tyylitiedosto -->
+  <link rel="stylesheet" href="../Lopputyö/CSS/tyyli.css">
+</head>
+
+<body>
+
+  <!-- NAVIGAATIO -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <!-- Sivuston nimi / logo vasemmalla -->
+      <a class="navbar-brand" href="index.html">⬥ CS2-SIVUSTO ⬥</a>
+
+      <!-- Hampurilaisnappula  -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navigaatioMenu"
+              aria-controls="navigaatioMenu"
+              aria-expanded="false"
+              aria-label="Avaa valikko">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigaatiolinkit -->
+      <div class="collapse navbar-collapse" id="navigaatioMenu">
+        <ul class="navbar-nav ms-auto">
+          <!-- ms-auto siirtää linkit oikealle reunaan -->
+          <!-- Linkitykset oikeille sivuille-->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Etusivu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kartat.html">Kartat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galleria.html">Galleria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yhteystiedot.html">Yhteystiedot</a>
+          </li>
+          <li class="nav-item">
+            <!-- "active" korostaa nykyisen sivun -->
+            <a class="nav-link active" href="tietopankki.html">Tietopankki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">Info</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- /NAVIGAATIO -->
+
+
+    <!-- HERO-BANNERI - Suuri esittelyosio jokaisen sivun yläosassa -->
+  <section class="hero-banneri">
+    <div class="container">
+
+      <!-- Pieni tagi ennen pääotsikkoa -->
+      <span class="cs2-tagi">Satunnaista nippelitietoa</span>
+
+      <!-- Pääotsikko -->
+      <h1>Tietopankki</h1>
+
+      <!-- Alaotsikkoteksti -->
+      <p class="hero-teksti">
+        Pientä näppärää tietoa pelistä.
+      </p>
+
+    </div>
+  </section>
+  <!-- /HERO-BANNERI -->
+
+
+  <!-- PÄÄASETTELU -->
+  <div class="info-ruudukko">
+
+
+    <!-- SIVUPALKKI -->
+    <aside class="info-sivupalkki">
+
+      <!-- Sivupalkin otsikko -->
+      <h3>Sisällys</h3>
+
+      <!-- Linkkilista-->
+      <!-- Linkit ohjautuvat ulkopuoleisille sivuille uudessa ikkunassa -->
+      <ul class="sivupalkki-lista">
+        <li><a href="https://en.wikipedia.org/wiki/Counter-Strike_2" target="_blank">📜 CS2 wikipedia EN</a></li>
+        <li><a href="https://liquipedia.net/counterstrike/Counter-Strike_2#Game_Modes" target="_blank">🎮 Pelimuodot EN</a></li>
+        <li><a href="https://liquipedia.net/counterstrike/Portal:Weapons" target="_blank">🔫 Aseet EN</a></li>
+        <li><a href="https://www.hltv.org/stats/teams?startDate=2026-02-20&endDate=2026-05-20&rankingFilter=Top20" target="_blank">📊 Tilastot / Hltv.org</a></li>
+        <li><a href="https://liquipedia.net/counterstrike/Definitions#General_Game-play_terms" target="_blank">📖 Termistö EN</a></li>
+      </ul>
+
+      <!-- Sivupalkin erotteluviiva -->
+      <hr class="sivupalkki-viiva">
+
+      <!-- Pikainfo-tilastot -->
+      <h3>Pikainfo</h3>
+      <p class="pikainfo-teksti">
+        <!-- Random tietoja -->
+        <strong class="pikainfo-otsikko">Julkaisupäivä:</strong><br>
+        27.9.2023<br><br>
+        <strong class="pikainfo-otsikko">Kehittäjä:</strong><br>
+        Valve Corporation<br><br>
+        <strong class="pikainfo-otsikko">Pelialusta:</strong><br>
+        PC (Windows, macOS, Linux)<br><br>
+        <strong class="pikainfo-otsikko">Hinta:</strong><br>
+        Ilmainen/Prime-muoto 14,29€ Steam Storesta.<br><br>
+        <strong class="pikainfo-otsikko">Ikäraja:</strong><br>
+        PEGI 18
+      </p>
+
+      <!-- Linkki Steamiin -->
+      <hr class="sivupalkki-viiva">
+      <a href="https://store.steampowered.com/app/730/CounterStrike_2/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="nappi-paa sivupalkki-nappi">
+        Lataa Steamistä →
+      </a>
+
+    </aside>
+    <!-- /SIVUPALKKI -->
+
+
+    <!-- PÄÄSISÄLTÖALUE -->
+    <main class="info-sisalto">
+
+
+      <!-- ---- OSIO 1: HISTORIA ---- -->
+      <section id="historia">
+
+        <h2 class="osio-otsikko">Lyhyt historia</h2>
+        <div class="osio-viiva"></div>
+
+        <p>
+          Counter-Strike syntyi alun perin Half-Life -pelin modinä vuonna 1999.
+          Kehittäjät Minh Le ja Jess Cliffe loivat taktisen moninpelin, jossa
+          terroristit ja erikoisjoukot taistelevat vastakkain.
+        </p>
+
+        <p>
+          Valve osti pelin vuonna 2000, ja siitä tuli maailman suosituin
+          verkkomultiplayer-peli. Vuonna 2012 julkaistu Counter-Strike: Global
+          Offensive (CS:GO) mullisti sarjan täysin, ja se siirtyi ilmaiseksi
+          pelattavaksi vuonna 2018. 
+        </p>
+
+        <p>
+          CS2 julkaistiin 27. syyskuuta 2023 korvaten CS:GO:n täysin. Se toi
+          mukanaan Source 2 -pelimoottori, Sub-Tick-palvelintekniikan ja
+          täysin uusitut volumetriset savupilvet.
+        </p>
+
+      </section>
+      <!-- /OSIO 1 -->
+
+
+      <hr class="tilasto-viiva">
+
+
+      <!-- ---- OSIO 2: PELIMUODOT ---- -->
+      <section id="pelimuodot">
+      
+        <h2 class="osio-otsikko">Pelimuodot</h2>
+        <div class="osio-viiva"></div>
+      
+        <div class="pelimuodot-container">
+      
+          <div class="pelimuoto-kortti">
+            <h5>🎯 Premier</h5>
+            <p>
+              Virallinen rankattu pelimuoto. 5v5, 24 kierrosta.
+              Pistejärjestelmä ELO-pohjaisesti.
+            </p>
+          </div>
+      
+          <div class="pelimuoto-kortti">
+            <h5>🏅 Kilpailullinen</h5>
+            <p>
+              Vanha rankattu tila. 5v5. Yksi kartta kerrallaan.
+              Hyvä harjoittelumuoto.
+            </p>
+          </div>
+      
+          <div class="pelimuoto-kortti">
+            <h5>💨 Deathmatch</h5>
+            <p>
+              Pelaa ilman taloudellisia rajoituksia. Erinomainen
+              tähtäysharjoitteluun.
+            </p>
+          </div>
+      
+          <div class="pelimuoto-kortti">
+            <h5>⚡ Wingman</h5>
+            <p>
+              2v2 pienikokoisilla kartoilla. Nopea ja intensiivinen
+              pelimuoto.
+            </p>
+          </div>
+      
+        </div>
+      </section>
+      <!-- /OSIO 2 -->
+
+
+      <hr class="tilasto-viiva">
+
+
+      <!-- ---- OSIO 3: ASEET (taulukko) ---- -->
+      <section id="aseet">
+
+        <h2 class="osio-otsikko">Aseet</h2>
+        <div class="osio-viiva"></div>
+
+        <p class="aseet">
+          CS2:ssa on yli 30 erilaista asetta. Tässä yleisimmät kilpailuaseet:
+        </p>
+
+        <!-- Asetaulukko  -->
+        <table class="info-taulukko">
+          <thead>
+            <tr>
+              <!-- Taulun otsikot -->
+              <th>Ase</th>
+              <th>Tyyppi</th>
+              <th>Hinta ($)</th>
+              <th>Vahinko</th>
+              <th>Lipas</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!--Tähän voi lisätä tavaraa jos jaksaa/kiinnostaa -->
+            <tr>
+              <td>AK-47</td>
+              <td>Kivääri (T)</td>
+              <td>$2700</td>
+              <td>36</td>
+              <td>30+3 lipasta</td>
+            </tr>
+            <tr>
+              <td>M4A4</td>
+              <td>Kivääri (CT)</td>
+              <td>$2900</td>
+              <td>33</td>
+              <td>30+4 lipasta</td>
+            </tr>
+            <tr>
+              <td>M4A1-S</td>
+              <td>Kivääri (CT)</td>
+              <td>$2900</td>
+              <td>38</td>
+              <td>20+3 lipasta</td>
+            </tr>
+            <tr>
+              <td>AWP</td>
+              <td>Sniperkivääri (CT/T)</td>
+              <td>$4750</td>
+              <td>115</td>
+              <td>5+2 lipasta</td>
+            </tr>
+            <tr>
+              <td>Desert Eagle</td>
+              <td>Pistooli (CT/T)</td>
+              <td>$700</td>
+              <td>53</td>
+              <td>7+2 lipasta</td>
+            </tr>
+            <tr>
+              <td>Galil AR</td>
+              <td>Kivääri (T)</td>
+              <td>$1800</td>
+              <td>30</td>
+              <td>35+4 lipasta</td>
+            </tr>
+            <tr>
+              <td>FAMAS</td>
+              <td>Kivääri (CT)</td>
+              <td>$1950</td>
+              <td>30</td>
+              <td>25+4 lipasta</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </section>
+      <!-- /OSIO 3 -->
+
+
+      <hr class="tilasto-viiva">
+
+
+      <!-- ---- OSIO 4: TILASTOT ---- -->
+      <section id="tilastot">
+
+        <h2 class="osio-otsikko">Tilastot</h2>
+        <div class="osio-viiva"></div>
+
+        <!-- Tilastolaatikot-->
+        <div class="info-tilastot">
+
+          <!-- Jokainen tilasto-laatikko -->
+          <div class="tilasto-laatikko">
+            <span class="tilasto-arvo">1M+</span>
+            <span class="tilasto-nimi">Pelaajia päivittäin</span>
+          </div>
+
+          <div class="tilasto-laatikko">
+            <span class="tilasto-arvo">+20</span>
+            <span class="tilasto-nimi">Vuotta historiaa</span>
+          </div>
+
+          <div class="tilasto-laatikko">
+            <span class="tilasto-arvo">7</span>
+            <span class="tilasto-nimi">Kilpailullista karttaa (premier)</span>
+          </div>
+
+          <div class="tilasto-laatikko">
+            <span class="tilasto-arvo">+34</span>
+            <span class="tilasto-nimi">Asetta pelissä</span>
+          </div>
+
+          <div class="tilasto-laatikko">
+            <span class="tilasto-arvo">#1</span>
+            <span class="tilasto-nimi">Suosituin e-urheilupeli</span>
+          </div>
+
+        </div>
+        <!-- /info-tilastot -->
+
+      </section>
+      <!-- /OSIO 4 -->
+
+
+      <hr class="tilasto-viiva">
+
+
+      <!-- ---- OSIO 5: TERMISTÖ ---- -->
+      <section id="termit">
+
+        <h2 class="osio-otsikko">Termistö</h2>
+        <div class="osio-viiva"></div>
+
+        <p class="termisto-esittely">
+          CS2:ssa on paljon omaa sanastoa. Tässä yleisimmät termit:
+        </p>
+
+        <!-- Termit -->
+        <div class="termisto-container">
+
+          <div class="termi-kortti">
+            <strong>Clutch</strong>
+            <p>
+              Tilanne, jossa yksi pelaaja jää eloon useita vastustajia vastaan.
+            </p>
+          </div>
+
+          <div class="termi-kortti">
+            <strong>Eco</strong>
+            <p>
+              Halvalla tai ilman aseita pelattava kierros, jotta seuraavalle säästetään.
+            </p>
+          </div>
+
+          <div class="termi-kortti">
+            <strong>Force buy</strong>
+            <p>
+              Ostetaan mitä rahaa on, vaikka se ei olisi optimaalista.
+            </p>
+          </div>
+
+          <div class="termi-kortti">
+            <strong>Peek</strong>
+            <p>
+              Hyökätään nurkan takaa nähdäkseen/ampuakseen vastustajan.
+            </p>
+          </div>
+
+          <div class="termi-kortti">
+            <strong>Rotate</strong>
+            <p>
+              Siirtyminen pommipaikalta toiselle tilanteen muuttuessa.
+            </p>
+          </div>
+
+          <div class="termi-kortti">
+            <strong>Sub-tick</strong>
+            <p>
+              CS2:n palvelinteknologia, joka tallentaa tapahtumat tarkemmin kuin vanha tikki-pohjainen systeemi.
+            </p>
+          </div>
+        </div>
+        <!-- /termit -->
+
+      </section>
+      <!-- /OSIO 5 -->
+
+
+    </main>
+    <!-- /PÄÄSISÄLTÖALUE -->
+
+
+  </div>
+  <!-- PÄÄASETTELU -->
+
+
+   <!-- ALATUNNISTE (footer) -->
+  <footer class="alatunniste">
+    <div class="container">
+      <div class="row">
+
+        <!-- Sarake 1: Tietoa sivustosta -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>CS2-Sivusto</h5>
+          <p>
+            "Fanisivu" Counter-Strike 2 -pelille. Kaikki oikeudet kuuluvat
+            Valve Corporationille. Kuvat Valven youtube ja tekstit tekoälyllä. Kaikki sisältö on vain harjoitustarkoituksessa tehty.
+            Tämä on kurssin päättötyö.
+          </p>
+        </div>
+
+        <!-- Sarake 2: Nopeat linkit -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>Sivut</h5>
+          <p><a href="index.html">Etusivu</a></p>
+          <p><a href="kartat.html">Kartat & Kohteet</a></p>
+          <p><a href="galleria.html">Kuvagalleria</a></p>
+          <p><a href="yhteystiedot.html">Yhteystiedot</a></p>
+          <p><a href="tietopankki.html">Tietopankki</a></p>
+        </div>
+
+        <!-- Sarake 3: Yhteystiedot -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>Yhteystiedot</h5>
+          <p>Sähköposti: ei@ole.net</p>
+          <p>Discord: Eiole#123</p>
+          <p>Steam: Eiole/cs2sivusto</p>
+        </div>
+
+      </div>
+
+      <!-- Alatunnisteen alaosa: tekijänoikeudet -->
+      <div class="alatunniste-alaosa">
+        <p>
+          &copy; 2026 Jani Hynninen | Tehty HTML-kurssin projektina.
+          Counter-Strike 2 on Valve Corporationin tavaramerkki.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- /ALATUNNISTE -->
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--
+     Tiedosto: galleria.html
+     Sivu:     CS2 - Kuvagalleria
+     Kuvaus:   Kuvaruudukko CS2:n kuvakaappauksista ja kuvista.
+-->
+<html lang="fi">
+
+<head>
+  <!-- Merkistökoodaus: UTF-8 tukee ääkkösiä -->
+  <meta charset="UTF-8">
+  <!-- Sivun kuvaus hakukoneita varten -->
+  <meta name="description" content="CS2-sivusto – Counter-Strike 2 esittely, kartat, aseet ja yhteystiedot.">
+  <!-- Sivuston tekijä -->
+  <meta name="author" content="Jani Hynninen, Lapin AMK, Lapland UAS">
+  <!-- Hakusanat hakukoneille -->
+  <meta name="keywords" content="CS2, Counter-Strike 2, FPS, pelisivu, kartat, aseet">
+  <!-- Sivun skaalautuvuus näytön mukaan -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Sivun otsikko selainvälilehdessä -->
+  <title>CS2-sivusto | Galleria</title>
+  <!-- Bootstrap 5 CSS CDN-linkki -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Oma tyylitiedosto -->
+  <link rel="stylesheet" href="../Lopputyö/CSS/tyyli.css">
+</head>
+
+<body>
+
+  <!-- NAVIGAATIO -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <!-- Sivuston nimi / logo vasemmalla -->
+      <a class="navbar-brand" href="index.html">⬥ CS2-SIVUSTO ⬥</a>
+
+      <!-- Hampurilaisnappula  -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navigaatioMenu"
+              aria-controls="navigaatioMenu"
+              aria-expanded="false"
+              aria-label="Avaa valikko">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigaatiolinkit -->
+      <div class="collapse navbar-collapse" id="navigaatioMenu">
+        <ul class="navbar-nav ms-auto">
+          <!-- ms-auto siirtää linkit oikealle reunaan -->
+          <!-- Linkitykset oikeille sivuille-->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Etusivu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kartat.html">Kartat</a>
+          </li>
+          <li class="nav-item">
+            <!-- "active" korostaa nykyisen sivun -->
+            <a class="nav-link active" href="galleria.html">Galleria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yhteystiedot.html">Yhteystiedot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tietopankki.html">Tietopankki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">Info</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- /NAVIGAATIO -->
+
+
+<!-- HERO-BANNERI - Suuri esittelyosio jokaisen sivun yläosassa -->
+  <section class="hero-banneri">
+    <div class="container">
+
+      <!-- Pieni tagi ennen pääotsikkoa -->
+      <span class="cs2-tagi">Satunnaisia kuvia</span>
+
+      <!-- Pääotsikko -->
+      <h1>Kuvagalleria</h1>
+
+      <!-- Alaotsikkoteksti -->
+      <p class="hero-teksti">
+        Katso kuvakaappauksia CS2:n kartoista, aseista ja pelihetkistä. 
+        Kuvat ovat itse kaapattuja, suoraan pelin harjoitusmoodissa. Kuvia on käsitelty.
+      </p>
+
+    </div>
+  </section>
+  <!-- /HERO-BANNERI -->
+
+
+  <!-- GALLERIAKATEGORIA 1: KARTAT -->
+  <section class="sivun-sisalto">
+    <div class="container">
+
+      <h2 class="osio-otsikko">Kartat</h2>
+      <div class="osio-viiva"></div>
+
+      <!-- Galleria: 4 saraketta leveällä, 2 tabletilla, 1 mobiilissa -->
+      <div class="row g-3">
+
+        <!-- Galleriakuva 1 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/dedust2_long.jpg" alt="de_dust2 long">
+          </div>
+           <p class="galleria-p">Dust II – Terroristi long</p>
+          <!-- Kuvan alle kuvateksti--> 
+        </div>
+        <!-- /Galleriakuva 1-->
+        <!-- Galleriakuva 2 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/ct_banana.jpg" alt="de_inferno banana">
+          </div>
+          <p class="galleria-p">Inferno – CT banaani</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 2 -->
+        <!-- Galleriakuva 3 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/t_topmid.jpg" alt="de_mirage t-topmid">
+          </div>
+          <p class="galleria-p">Mirage – Top-mid terroristi</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 3 -->
+        <!-- Galleriakuva 4 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/ct_heaven.jpg" alt="de_nuke Ct-heaven">
+          </div>
+          <p class="galleria-p">Nuke – Sisäalue CT heaven</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 4 -->
+      </div>
+      
+
+    </div>
+  </section>
+  <!-- /GALLERIAKATEGORIA 1 -->
+
+
+  <!-- GALLERIAKATEGORIA 2: ASEET -->
+  <section class="tausta-tumma">
+    <div class="container">
+
+      <h2 class="osio-otsikko">Aseet</h2>
+      <div class="osio-viiva"></div>
+
+      <!-- Tässä kategoriassa 4 saraketta leveällä -->
+      <div class="row g-3">
+
+        <!-- Galleriakuva 5 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/t_ak47.jpg" alt="AK47">
+          </div>
+          <p class="galleria-p">AK-47 – Terroristien kivääri</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+         <!-- /Galleriakuva 5 -->
+        <!-- Galleriakuva 6 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/t_galil.jpg" alt="GALIL">
+          </div>
+          <p class="galleria-p">Galil – Terroristien budjettikivääri</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 6 -->
+        <!-- Galleriakuva 7 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/t_glock.jpg" alt="GLOCK">
+          </div>
+          <p class="galleria-p">Glock – Terroristien aloituspistooli</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 7 -->
+        <!-- Galleriakuva 8 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/t_puukko.jpg" alt="T KNIV">
+          </div>
+          <p class="galleria-p">Puukko – T:n aloituspuukko</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 8 -->
+        <!-- Galleriakuva 9 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/ct_m4a4.jpg" alt="M4A4">
+          </div>
+          <p class="galleria-p">M4A4 – CT:n kivääri</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 9 -->
+        <!-- Galleriakuva 10 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/ct_famas.jpg" alt="FAMAS">
+          </div>
+          <p class="galleria-p">Famas – CT:n budjettikivääri</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 10 -->
+        <!-- Galleriakuva 11 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/ct_usp.jpg" alt="USP">
+          </div>
+          <p class="galleria-p">USP – CT:n aloituspistooli</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 11 -->
+        <!-- Galleriakuva 12 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="galleria-kuva-kehys">
+            <img src="../Lopputyö/kuvat/galleria/ct_puukko.jpg" alt="CT KNIV">
+          </div>
+          <p class="galleria-p">Puukko – CT:n peruspuukko</p>
+          <!-- Kuvan alle kuvateksti-->
+        </div>
+        <!-- /Galleriakuva 12 -->
+      </div>
+      <!-- /rivi -->
+
+    </div>
+  </section>
+  <!-- /GALLERIAKATEGORIA 2 -->
+
+
+  <!-- GALLERIAKATEGORIA 3: PELIHETKET -->
+  <section class="sivun-sisalto">
+    <div class="container">
+
+      <h2 class="osio-otsikko">Pelihetket</h2>
+      <div class="osio-viiva"></div>
+
+      <!-- 2 isompaa kuvaa vierekkäin -->
+      <div class="row g-3">
+
+        <!-- Iso galleriakuva 1 -->
+        <div class="col-12 col-md-6">
+          <div class="galleria-kuva-kehys2">
+            <img src="../Lopputyö/kuvat/galleria/waterfall_smoke.jpg" alt="waterfall_smoke">
+          </div>
+          <p class="galleria-p2">Volumetrinen savupilvi – ns.Waterfall smoke</p>
+          <!-- Kuvan alle kuvateksti-->
+          </p>
+        </div>
+        <!-- /Iso galleriakuva 1 -->
+        <!-- Iso galleriakuva 2 -->
+        <div class="col-12 col-md-6">
+          <div class="galleria-kuva-kehys2">
+            <img src="../Lopputyö/kuvat/galleria/molotov.jpg" alt="T_molotov">
+          </div>
+          <p class="galleria-p2">Molotov – Terroristien Molotov</p>
+          <!-- Kuvan alle kuvateksti-->
+          </p>
+        </div>
+        <!-- /Iso galleriakuva 2 -->
+      </div>
+      <!-- /rivi -->
+
+    </div>
+  </section>
+  <!-- /GALLERIAKATEGORIA 3 -->
+
+
+   <!-- ALATUNNISTE (footer) -->
+  <footer class="alatunniste">
+    <div class="container">
+      <div class="row">
+
+        <!-- Sarake 1: Tietoa sivustosta -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>CS2-Sivusto</h5>
+          <p>
+            "Fanisivu" Counter-Strike 2 -pelille. Kaikki oikeudet kuuluvat
+            Valve Corporationille. Kuvat Valven youtube ja tekstit tekoälyllä. Kaikki sisältö on vain harjoitustarkoituksessa tehty.
+            Tämä on kurssin päättötyö.
+          </p>
+        </div>
+
+        <!-- Sarake 2: Nopeat linkit -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>Sivut</h5>
+          <p><a href="index.html">Etusivu</a></p>
+          <p><a href="kartat.html">Kartat & Kohteet</a></p>
+          <p><a href="galleria.html">Kuvagalleria</a></p>
+          <p><a href="yhteystiedot.html">Yhteystiedot</a></p>
+          <p><a href="tietopankki.html">Tietopankki</a></p>
+        </div>
+
+        <!-- Sarake 3: Yhteystiedot -->
+        <div class="col-12 col-md-4 mb-4">
+          <h5>Yhteystiedot</h5>
+          <p>Sähköposti: ei@ole.net</p>
+          <p>Discord: Eiole#123</p>
+          <p>Steam: Eiole/cs2sivusto</p>
+        </div>
+
+      </div>
+
+      <!-- Alatunnisteen alaosa: tekijänoikeudet -->
+      <div class="alatunniste-alaosa">
+        <p>
+          &copy; 2026 Jani Hynninen | Tehty HTML-kurssin projektina.
+          Counter-Strike 2 on Valve Corporationin tavaramerkki.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- /ALATUNNISTE -->
+
+</body>
+</html>
