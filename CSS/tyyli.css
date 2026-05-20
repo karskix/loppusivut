@@ -760,7 +760,6 @@ margin-top: -16px;
 }
 
 .profile-info h2 {
-  font-family: 'Rajdhani', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--cs2-valkoinen);
@@ -871,7 +870,6 @@ margin-top: -16px;
 }
 
 .logo-name {
-  font-family: 'Rajdhani', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   color: var(--cs2-valkoinen);
