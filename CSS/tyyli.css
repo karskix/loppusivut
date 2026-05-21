@@ -512,6 +512,21 @@ margin-top: -16px;
   margin-bottom: 32px;
 }
 
+/* Info-tilastot mobiilille */
+@media (max-width: 768px) {
+  .info-ruudukko {
+    grid-template-columns: 1fr; /* yksi sarake */
+    gap: 16px;                  /* pienempi rako mobiilissa */
+    padding: 0 16px;            /* marginaalia sivuille */
+  }
+
+  .info-sivupalkki,
+  .info-sisalto {
+    width: 100%;               /* vie koko leveyden */
+    padding: 16px;             /* pienempi padding mobiilissa */
+  }
+}
+   
 /* Yksittäinen tilastolaatikko */
 .tilasto-laatikko {
   flex: 1 1 140px;          /* Kasvaa tasaisesti, min 140px */
