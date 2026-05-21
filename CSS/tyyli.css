@@ -31,13 +31,15 @@ body {
 .navbar {
   background-color: var(--cs2-harmaa-tumma) !important;
   border-bottom: 2px solid var(--cs2-keltainen) ;   /* Keltainen viiva alhaalla */
-  padding: 12px 0;
+  padding: 12px 16px;
+   width:100%;
+   margin: 0 auto;
 }
 
 /* Sivuston logo / nimi navigaatiossa */
 .navbar-brand {
   color: var(--cs2-keltainen) !important;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -75,6 +77,14 @@ body {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f5a623' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* Navigaation linkit joustavat mobiilissa */
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
 
 /* --- 4. HERO-BANNERI --- */
 .hero-banneri {
@@ -116,6 +126,7 @@ body {
   
   .hero-banneri h1 {
     letter-spacing: 2px;
+     font-size: 2rem;
   }
 
 
