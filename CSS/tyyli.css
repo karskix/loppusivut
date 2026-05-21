@@ -436,15 +436,13 @@ margin-top: -16px;
   grid-template-columns: 200px 1fr;   /* Kiinteä sivupalkki + joustava sisältö */
   grid-template-rows: auto;
   gap: 32px;
-  max-width: auto;
+  max-width: 100%;
   margin: 40px auto;
   padding: 0 24px;
 }
 
 /* Sivupalkki (grid-item) */
 .info-sivupalkki {
-   width: 280px;
-   max-width: 100%;
   background-color: var(--cs2-harmaa-tumma);
   border: 1px solid var(--cs2-harmaa-keski);
   border-radius: 8px;
@@ -530,8 +528,7 @@ margin-top: -16px;
 /* Info-tilastot mobiilille */
 @media (max-width: 768px) {
   .info-ruudukko {
-     display: flex;
-     flex-direction: column;
+   grid-auto-rows: auto;
     grid-template-columns: 1fr; /* yksi sarake */
     gap: 16px;                  /* pienempi rako mobiilissa */
     padding: 0 16px;            /* marginaalia sivuille */
@@ -560,10 +557,11 @@ margin-top: -16px;
 
   /* Tilastoboxit ja kortit venyvät koko leveyteen */
   .tilasto-laatikko,
-  .pelimuoto-kortti 
+  .pelimuoto-kortti, 
    .termi-kortti {
     flex: 1 1 100%;
      max-width: 100%
+   }
 
   /* Taulukot eivät riko layoutia */
   .info-taulukko {
