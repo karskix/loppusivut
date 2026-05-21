@@ -531,6 +531,8 @@ margin-top: -16px;
     grid-template-columns: 1fr; /* yksi sarake */
     gap: 16px;                  /* pienempi rako mobiilissa */
     padding: 0 16px;            /* marginaalia sivuille */
+    margin: 20px auto;       /* pienempi margin */
+    box-sizing: border-box;  /* tärkeää */
   }
 
   .info-sivupalkki,
@@ -554,8 +556,21 @@ margin-top: -16px;
 
   /* Tilastoboxit ja kortit venyvät koko leveyteen */
   .tilasto-laatikko,
-  .pelimuoto-kortti {
+  .pelimuoto-kortti 
+   .termi-kortti {
     flex: 1 1 100%;
+     max-width: 100%
+
+  /* Taulukot eivät riko layoutia */
+  .info-taulukko {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .info-taulukko th,
+  .info-taulukko td {
+    white-space: nowrap;
   }
 }
    
