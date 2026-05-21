@@ -85,13 +85,13 @@ body {
     var(--cs2-tumma) 100%
   );
   border-bottom: 3px solid var(--cs2-keltainen);
-  padding: 80px 0;
+  padding: 60px 0;
   text-align: center;
 }
 
 /* Hero-otsikko */
 .hero-banneri h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: var(--cs2-keltainen);
   text-transform: uppercase;
@@ -102,9 +102,9 @@ body {
 /* Hero-alaotsikko */  
 .hero-banneri p.hero-teksti {
   margin-bottom: 32px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--cs2-harmaa-vaalea);
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto 24px auto;
 }
 
