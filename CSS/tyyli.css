@@ -443,6 +443,8 @@ margin-top: -16px;
 
 /* Sivupalkki (grid-item) */
 .info-sivupalkki {
+   width: 280px;
+   max-width: 100%;
   background-color: var(--cs2-harmaa-tumma);
   border: 1px solid var(--cs2-harmaa-keski);
   border-radius: 8px;
