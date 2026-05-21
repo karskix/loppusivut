@@ -91,7 +91,7 @@ body {
 
 /* Hero-otsikko */
 .hero-banneri h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
   color: var(--cs2-keltainen);
   text-transform: uppercase;
