@@ -537,6 +537,25 @@ margin-top: -16px;
   .info-sisalto {
     width: 100%;               /* vie koko leveyden */
     padding: 16px;             /* pienempi padding mobiilissa */
+    box-sizing: border-box; /* Tärkeää, ettei padding lisää leveyttä */
+  }
+
+  /* Taulukot mobiilissa: skrollattavia, ei riko layoutia */
+  .info-taulukko {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .info-taulukko th,
+  .info-taulukko td {
+    white-space: nowrap; /* estää rivinvaihdot */
+  }
+
+  /* Tilastoboxit ja kortit venyvät koko leveyteen */
+  .tilasto-laatikko,
+  .pelimuoto-kortti {
+    flex: 1 1 100%;
   }
 }
    
