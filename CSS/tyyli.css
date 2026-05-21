@@ -27,8 +27,7 @@ body {
 }
 
 
-/* --- 3. NAVIGAATIO (navbar) ---
-   Bootstrap navbar mukautettu CS2-teemaan. */
+/* --- 3. NAVIGAATIO (navbar) --- */
 .navbar {
   background-color: var(--cs2-harmaa-tumma) !important;
   border-bottom: 2px solid var(--cs2-keltainen) ;   /* Keltainen viiva alhaalla */
@@ -77,8 +76,7 @@ body {
 }
 
 
-/* --- 4. HERO-BANNERI (pääsivun yläosa) ---
-   Suuri esittelyosio pääsivulla. */
+/* --- 4. HERO-BANNERI --- */
 .hero-banneri {
   background: linear-gradient(
     135deg,
@@ -111,8 +109,7 @@ body {
 }
 
 
-/* --- 5. OSIO-OTSIKOT ---
-   Yhtenäinen tyyli kaikille sivujen väliotsikoille. */
+/* --- 5. OSIO-OTSIKOT --- */
 .osio-otsikko {
   color: var(--cs2-keltainen);
   font-size: 2rem;
@@ -345,8 +342,7 @@ a:has(.cs2-kortti) {
 }
 
 
-/* --- 9. KUVAGALLERIA ---
-   Ruudukkoasettelu galleriasivulle. */
+/* --- 9. KUVAGALLERIA --- */
 
 /* Galleriaruudukko: Bootstrap-gridillä */
 .galleria-kuva-kehys {
@@ -403,9 +399,13 @@ text-align: center;
 margin-top: -16px;
 }
 
+.galleria-kuva-kehys .galleria-kuva-kehys2 img {
+  width: 100%;
+  height: 220px;        /* Kiinteä korkeus kaikille */
+  object-fit: cover;    /* Rajaa kuvan sopimaan */
+}
 
-/* --- 10. Tietopankki-SIVU (CSS Grid + Flexbox) ---
-   Tietopankkisivu käyttää CSS Grid -asettelua, ei Bootstrap-gridia. */
+/* --- 10. Tietopankki-SIVU (CSS Grid + Flexbox) ---*/
 
 /* Pääruudukko: sivupalkki ja sisältö vierekkäin */
 .info-ruudukko {
@@ -719,9 +719,7 @@ margin-top: -16px;
   min-height: 260px;
 }
 
-/* ═══════════════════════════════════════
-   KORTTI 1 – Kuva + tiedot (KORJATTU GRIDIKSI)
-═══════════════════════════════════════ */
+/* KORTTI 1 – Kuva + tiedot (KORJATTU GRIDIKSI) */
 .card-1 {
   padding: 0; /* Otetaan tyhjä tila haluun, jotta alarivi osuu reunoihin asti */
   display: grid;
@@ -839,9 +837,7 @@ margin-top: -16px;
   fill: currentColor; 
 }
 
-/* ═══════════════════════════════════════
-   KORTTI 2 – Logo keskellä
-═══════════════════════════════════════ */
+/* KORTTI 2 – Logo keskellä */
 .card-2 {
   display: flex;
   flex-direction: column;
@@ -883,9 +879,7 @@ margin-top: -16px;
   margin-top: 0.25rem;
 }
 
-/* ═══════════════════════════════════════
-   KORTTI 3 – Teksti vasemmalta, kohdistettu keskelle
-═══════════════════════════════════════ */
+/* KORTTI 3 – Teksti vasemmalta, kohdistettu keskelle */
 .card-3 {
   display: flex;
   align-items: center;
@@ -906,9 +900,7 @@ margin-top: -16px;
   font-weight: 600;
 }
 
-/* ═══════════════════════════════════════
-   KORTTI 4 – Some-linkit, keskitetty
-═══════════════════════════════════════ */
+/* KORTTI 4 – Some-linkit, keskitetty */
 .card-4 {
   display: flex;
   flex-direction: column;
@@ -969,6 +961,4 @@ margin-top: -16px;
 
 
 
-/* ============================================================
-   Tiedosto päättyy tähän.
-   ============================================================ */
+/* Tiedosto päättyy tähän */
