@@ -85,6 +85,7 @@ body {
     gap: 8px;
     text-align: center;
   }
+}
 
 /* --- 4. HERO-BANNERI --- */
 .hero-banneri {
@@ -979,7 +980,7 @@ margin-top: -16px;
   .cards-grid {
     grid-template-columns: 1fr;
   }
-  
+
   /* Mobiilissa Kortti 1 muuttuu takaisin yhdeksi sarakkeeksi, jotta se mahtuu ruudulle */
   .card-1 {
     grid-template-columns: 1fr;
