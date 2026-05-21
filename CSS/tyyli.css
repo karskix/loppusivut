@@ -108,6 +108,16 @@ body {
   margin: 0 auto 24px auto;
 }
 
+/* Muotoilu puhelimille */
+@media (max-width: 768px) {
+  .hero-banneri {
+    padding: 6vh 0;
+  }
+  
+  .hero-banneri h1 {
+    letter-spacing: 2px;
+  }
+}
 
 /* --- 5. OSIO-OTSIKOT --- */
 .osio-otsikko {
