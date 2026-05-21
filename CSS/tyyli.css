@@ -102,7 +102,7 @@ body {
 /* Hero-alaotsikko */  
 .hero-banneri p.hero-teksti {
   margin-bottom: 32px;
-  font-size: clamp(1rem, 3vw, 1.2rem)
+  font-size: clamp(1rem, 3vw, 1.2rem);
   color: var(--cs2-harmaa-vaalea);
   max-width: 500px;
   margin: 0 auto 24px auto;
